@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D'Chicken - El sabor que te atrapa</title>
+  <meta name="description"
+    content="Bienvenido a D'Chicken, el hogar del pollo más crujiente y sabroso. Disfruta de nuestro marinado secreto y cocina a las brasas de carbón.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Comb (Cresta) -->
+          <path d="M35,25 C40,12 55,10 60,22 C65,12 75,18 73,30 C78,24 85,32 80,40" fill="var(--primary)" />
+          <!-- Beak (Pico) -->
+          <path d="M74,43 L88,48 L72,55 Z" fill="var(--accent)" />
+          <!-- Head & Body (Cabeza y Cuerpo) -->
+          <path d="M25,82 C18,65 24,40 45,35 C65,30 75,45 74,62 C73,80 50,92 25,82 Z" fill="var(--primary)" />
+          <!-- Eye (Ojo) -->
+          <circle cx="58" cy="46" r="4.5" fill="#000" />
+          <!-- Barbilla (Wattle) -->
+          <path d="M68,54 C70,62 65,65 62,60 Z" fill="#dc2626" />
+        </svg>
+        D'<span>Chicken</span>
+      </a>
+
+      <!-- Navegación -->
+      <nav>
+        <ul class="nav-links" id="main-nav">
+          <li><a href="index.html" class="active" id="nav-home">Inicio</a></li>
+          <li><a href="menu.html" id="nav-menu">Menú</a></li>
+          <li><a href="contacto.html" id="nav-contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón Menú Móvil -->
+      <div class="mobile-menu-btn" id="mobile-toggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-container">
+      <div class="hero-content reveal-left">
+        <span class="hero-badge">Sabor Tradicional &amp; Crujiente</span>
+        <h1><span class="text-gradient">El Pollo Más</span> <br><span class="text-highlight">Crujiente</span> y Sabroso
+        </h1>
+        <p class="text-muted">En D'Chicken combinamos ingredientes frescos de granja, un marinado artesanal de 24 horas
+          con nuestra receta secreta de especias, y una cocción perfecta a la brasa o frita para ofrecerte una
+          experiencia crujiente inolvidable.</p>
+        <div class="hero-buttons">
+          <a href="menu.html" class="btn btn-primary" id="hero-btn-menu">
+            Ver Nuestro Menú
+            <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 24 24">
+              <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z" />
+            </svg>
+          </a>
+          <a href="contacto.html" class="btn btn-secondary" id="hero-btn-contact">Reservar Mesa</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper reveal-right">
+        <img src="images/hero_chicken.png" alt="Pollo asado gourmet de D'Chicken" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRA ESENCIA -->
+  <section style="background-color: #100f0d;">
+    <div class="essence-container">
+      <div class="essence-img-grid reveal-left">
+        <img src="images/menu_crispy.png" alt="Preparación crujiente D'Chicken" class="essence-img">
+        <div class="essence-badge">
+          <span class="number">100%</span>
+          <span class="label">Fresco de Granja</span>
+        </div>
+      </div>
+
+      <div class="essence-content reveal-right">
+        <span class="hero-badge">Nuestra Esencia</span>
+        <h2>Pasión por el Sabor de Verdad</h2>
+        <p style="color: var(--text-muted);">Desde nuestra apertura, en D'Chicken nos hemos dedicado a perfeccionar el
+          arte de preparar pollo. Seleccionamos cuidadosamente cada pieza de origen local y la marinamos durante 24
+          horas con una infusión secreta de hierbas y especias finas. El resultado es una carne increíblemente tierna,
+          jugosa y llena de sabor, cubierta por una costra dorada y ultra crujiente.</p>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-num">24h</div>
+            <div class="stat-label">De Marinado Secreto</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Especias Exclusivas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100k+</div>
+            <div class="stat-label">Clientes Felices</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">4.9★</div>
+            <div class="stat-label">Calificación en Redes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES Y CARACTERÍSTICAS -->
+  <section>
+    <div class="section-header reveal">
+      <span class="hero-badge">¿Por Qué Elegirnos?</span>
+      <h2>Lo que Nos Hace Únicos</h2>
+      <p>Nos obsesiona la calidad y el sabor. Por eso, cuidamos cada detalle en nuestra cocina para que tu comida sea
+        memorable.</p>
+    </div>
+
+    <div class="grid-3">
+      <!-- Tarjeta 1: Receta Secreta -->
+      <div class="card-offer reveal-scale" style="transition-delay: 0.1s;">
+        <div class="offer-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+        </div>
+        <h3>Receta Secreta</h3>
+        <p>Utilizamos una combinación única de especias y hierbas aromáticas importadas que garantizan un sabor
+          inimitable que no encontrarás en ningún otro lugar.</p>
+      </div>
+
+      <!-- Tarjeta 2: Calidad de Origen -->
+      <div class="card-offer reveal-scale" style="transition-delay: 0.2s;">
+        <div class="offer-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <h3>Calidad Premium</h3>
+        <p>Trabajamos solo con granjas locales que garantizan pollos frescos, alimentados naturalmente y libres de
+          hormonas, asegurando frescura diaria.</p>
+      </div>
+
+      <!-- Tarjeta 3: Cocción de Alta Gama -->
+      <div class="card-offer reveal-scale" style="transition-delay: 0.3s;">
+        <div class="offer-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+          </svg>
+        </div>
+        <h3>Brasa y Fuego</h3>
+        <p>Nuestro equipo experto controla el calor del carbón vegetal y el tiempo de fritura a presión milimétricamente
+          para lograr una jugosidad perfecta por dentro.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER CTA -->
+  <section
+    style="background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(234, 179, 8, 0.03) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="section-header reveal" style="margin-bottom: 0;">
+      <span class="hero-badge">¡Haz Tu Pedido Ya!</span>
+      <h2 style="margin-bottom: 1.5rem;">Sabor Insuperable en la Puerta de tu Hogar</h2>
+      <p style="margin-bottom: 2.5rem;">¿Deseas disfrutar de nuestro pollo asado o crujiente en la comodidad de tu casa?
+        Pide en línea ahora y recógelo caliente, o visítanos hoy mismo en nuestra sucursal principal.</p>
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="menu.html" class="btn btn-primary" id="cta-btn-order">Ordenar Ahora</a>
+        <a href="contacto.html" class="btn btn-secondary" id="cta-btn-visit">Ver Sucursal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="font-size: 1.6rem;">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35,25 C40,12 55,10 60,22 C65,12 75,18 73,30 C78,24 85,32 80,40" fill="var(--primary)" />
+            <path d="M74,43 L88,48 L72,55 Z" fill="var(--accent)" />
+            <path d="M25,82 C18,65 24,40 45,35 C65,30 75,45 74,62 C73,80 50,92 25,82 Z" fill="var(--primary)" />
+            <circle cx="58" cy="46" r="4.5" fill="#000" />
+            <path d="M68,54 C70,62 65,65 62,60 Z" fill="#dc2626" />
+          </svg>
+          D'<span>Chicken</span>
+        </a>
+        <p>Ofrecemos el pollo más crujiente y sabroso preparado con nuestra exclusiva receta familiar. Compromiso con la
+          frescura y la calidad en cada platillo.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html">Nuestro Menú</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Horarios</h4>
+        <ul style="color: var(--text-muted); font-size: 0.95rem;">
+          <li>Lunes - Jueves:<br><span style="color: var(--text-light)">12:00 PM - 10:00 PM</span></li>
+          <li>Viernes - Sábado:<br><span style="color: var(--text-light)">12:00 PM - 11:30 PM</span></li>
+          <li>Domingos:<br><span style="color: var(--text-light)">12:00 PM - 09:00 PM</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Suscríbete</h4>
+        <p>Recibe ofertas exclusivas, cupones de descuento y lanzamientos de nuevos platillos.</p>
+        <form class="newsletter-form"
+          onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!'); this.reset();">
+          <input type="email" placeholder="Tu correo electrónico" class="form-control" required
+            aria-label="Correo electrónico para boletín">
+          <button type="submit" class="btn btn-primary" style="padding: 0 1.5rem;">Unirse</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 D'Chicken. Todos los derechos reservados.</p>
+      <p>Diseño premium para amantes del buen sabor.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
