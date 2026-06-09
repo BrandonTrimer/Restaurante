@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 1. SCROLL REVEAL ANIMATIONS (IntersectionObserver)
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-  
+
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. MOBILE MENU TOGGLE
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
-  
+
   if (mobileMenuBtn && navLinks) {
     mobileMenuBtn.addEventListener('click', () => {
       mobileMenuBtn.classList.toggle('open');
       navLinks.classList.toggle('open');
-      
+
       // Prevent body scrolling when menu is open
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     });
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         menuItems.forEach(item => {
           const itemCategory = item.getAttribute('data-category');
-          
+
           if (category === 'all' || itemCategory === category) {
             item.style.display = 'flex';
             // Trigger a tiny reflow to allow transition to run
@@ -97,14 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      
+
       // Add loading state
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<span>Enviando...</span>';
-      
+
       // Simulate API call
       setTimeout(() => {
         // Show custom modal or message
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
           padding: 2rem;
           border: 1px solid var(--primary);
         `;
-        
+
         successMessage.innerHTML = `
           <svg style="width: 64px; height: 64px; fill: var(--primary);" viewBox="0 0 24 24">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -137,13 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
           <p style="color: var(--text-muted); max-width: 320px;">Gracias por contactar con D'Chicken. Nos pondremos en contacto contigo lo antes posible.</p>
           <button class="btn btn-primary" style="margin-top: 1rem;" id="close-success-btn">Aceptar</button>
         `;
-        
+
         contactForm.appendChild(successMessage);
         contactForm.reset();
-        
+
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-        
+
         document.getElementById('close-success-btn').addEventListener('click', () => {
           successMessage.remove();
         });
