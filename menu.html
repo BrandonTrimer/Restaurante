@@ -52,8 +52,8 @@
         <li><button class="menu-nav-btn active" data-category="all" id="btn-cat-all">Todos</button></li>
         <li><button class="menu-nav-btn" data-category="brasa" id="btn-cat-brasa">A la Brasa</button></li>
         <li><button class="menu-nav-btn" data-category="frito" id="btn-cat-frito">Pollo Frito</button></li>
-        <li><button class="menu-nav-btn" data-category="hamburguesa" id="btn-cat-burger">Hamburguesas</button></li>
-        <li><button class="menu-nav-btn" data-category="alitas" id="btn-cat-wings">Alitas</button></li>
+        <!--<li><button class="menu-nav-btn" data-category="hamburguesa" id="btn-cat-burger">Hamburguesas</button></li>
+        <li><button class="menu-nav-btn" data-category="alitas" id="btn-cat-wings">Alitas</button></li>-->
       </ul>
     </div>
 
@@ -94,6 +94,30 @@
         <div class="menu-item-body">
           <h3>Crispy Tenders Combo</h3>
           <p style="color: var(--text-muted); font-size: 0.95rem;">Tiras de pechuga extra crujientes rebozadas en
+            nuestra mezcla especial, con papas rústicas.</p>
+          <div class="menu-item-ingredients">
+            <div class="ingredient-title">Ingredientes principales:</div>
+            <span class="ingredient-tag">Pechuga de Pollo</span>
+            <span class="ingredient-tag">Rebozado Secreto</span>
+            <span class="ingredient-tag">Especias Cajún</span>
+            <span class="ingredient-tag">Salsa Honey Mustard</span>
+            <span class="ingredient-tag">Papas Rústicas</span>
+          </div>
+          <div class="menu-item-order">
+            <button class="btn btn-primary btn-order-item"
+              onclick="alert('Añadido al carrito: Crispy Tenders Combo ($11.90)')">Añadir al Carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item reveal-scale" data-category="frito" style="transition-delay: 0.1s;">
+        <div class="menu-item-img-wrapper">
+          <img src="images/menu_crispy.png" alt="Combo Crispy Tenders" class="menu-item-img">
+          <span class="menu-item-price">$11.90</span>
+        </div>
+        <div class="menu-item-body">
+          <h3>Crispy Tenders Combo 2</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Tiras de loro extra crujientes negra en
             nuestra mezcla especial, con papas rústicas.</p>
           <div class="menu-item-ingredients">
             <div class="ingredient-title">Ingredientes principales:</div>

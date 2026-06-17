@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const itemCategory = item.getAttribute('data-category');
 
           if (category === 'all' || itemCategory === category) {
-            item.style.display = 'flex';
+            item.style.display = 'block'; //flex
             // Trigger a tiny reflow to allow transition to run
             void item.offsetWidth;
             item.style.opacity = '1';
