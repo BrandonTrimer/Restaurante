@@ -36,202 +36,368 @@
     </div>
   </header>
 
-  <!-- SECCIÓN HÉROE DEL MENÚ -->
-  <section
-    style="padding: 10rem 2rem 4rem; background: linear-gradient(180deg, rgba(17, 2, 4, 1) 0%, rgba(27, 7, 10, 0.6) 100%);">
-    <div class="section-header reveal">
-      <span class="hero-badge">Nuestra Carta</span>
-      <h2>Explora Nuestro Menú</h2>
-      <p>Cada platillo está elaborado siguiendo recetas exclusivas, marinados profundos y cocinados al punto perfecto
-        para estallar en sabor.</p>
-    </div>
+  <!-- SECCIÓN CARTA DEL MENÚ -->
+  <section class="carta-section">
+    <div class="carta-container">
 
-    <!-- Filtros del Menú -->
-    <div class="menu-nav-wrapper reveal">
-      <ul class="menu-nav" id="menu-categories-list">
-        <li><button class="menu-nav-btn active" data-category="all" id="btn-cat-all">Todos</button></li>
-        <li><button class="menu-nav-btn" data-category="brasa" id="btn-cat-brasa">A la Brasa</button></li>
-        <li><button class="menu-nav-btn" data-category="frito" id="btn-cat-frito">Pollo Frito</button></li>
-        <!--<li><button class="menu-nav-btn" data-category="hamburguesa" id="btn-cat-burger">Hamburguesas</button></li>
-        <li><button class="menu-nav-btn" data-category="alitas" id="btn-cat-wings">Alitas</button></li>-->
-      </ul>
-    </div>
+      <!-- TABLERO DE LA CARTA (ESTILO RESTAURANT BOARD) -->
+      <div class="carta-board reveal">
 
-    <!-- Menú Grid -->
-    <div class="menu-grid" id="menu-items-grid">
-      <!-- Item 1: Pollo a la Brasa Tradicional (Brasa) -->
-      <div class="menu-item reveal-scale" data-category="brasa">
-        <div class="menu-item-img-wrapper">
-          <img src="images/menu_roasted.png" alt="Pollo a la Brasa Tradicional" class="menu-item-img">
-          <span class="menu-item-price">$14.50</span>
-        </div>
-        <div class="menu-item-body">
-          <h3>Pollo a la Brasa</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">Nuestro clásico pollo marinado en cerveza negra y
-            especias andinas, asado al carbón.</p>
-          <div class="menu-item-ingredients">
-            <div class="ingredient-title">Ingredientes principales:</div>
-            <span class="ingredient-tag">Pollo de Granja</span>
-            <span class="ingredient-tag">Cerveza Negra</span>
-            <span class="ingredient-tag">Ajo Molido</span>
-            <span class="ingredient-tag">Romero</span>
-            <span class="ingredient-tag">Papas Fritas</span>
-            <span class="ingredient-tag">Ensalada</span>
+        <!-- ENCABEZADO DE LA CARTA -->
+        <div class="carta-header">
+          <div class="carta-title-group">
+            <span class="carta-title-top">CARTA</span>
+            <div class="carta-title-bottom">
+              <span class="carta-brand">D'CHICKEN</span>
+              <!--<svg class="carta-chicken-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3c-.55 0-1 .45-1 1v1.07C8.74 5.56 7 7.58 7 10c0 1.66.81 3.13 2.05 4.07C8.42 14.57 8 15.48 8 16.5c0 1.93 1.57 3.5 3.5 3.5h1c1.93 0 3.5-1.57 3.5-3.5 0-1.02-.42-1.93-1.05-2.43C16.19 13.13 17 11.66 17 10c0-2.42-1.74-4.44-4-4.93V4c0-.55-.45-1-1-1zm-2 7a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm4 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/>
+              </svg>-->
+            </div>
           </div>
-          <!--<div class="menu-item-order">
-            <button class="btn btn-primary btn-order-item"
-              onclick="alert('Añadido al carrito: Pollo a la Brasa ($14.50)')">Añadir al Carrito</button>
-          </div>-->
+          <p class="carta-subtitle">Especialidades al Carbón, Recetas Familiares y Crujientes de Autor</p>
         </div>
-      </div>
 
-      <!-- Item 2: Combo Crispy Tenders (Frito) -->
-      <div class="menu-item reveal-scale" data-category="frito" style="transition-delay: 0.1s;">
-        <div class="menu-item-img-wrapper">
-          <img src="images/menu_crispy.png" alt="Combo Crispy Tenders" class="menu-item-img">
-          <span class="menu-item-price">$11.90</span>
-        </div>
-        <div class="menu-item-body">
-          <h3>Crispy Tenders Combo</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">Tiras de pechuga extra crujientes rebozadas en
-            nuestra mezcla especial, con papas rústicas.</p>
-          <div class="menu-item-ingredients">
-            <div class="ingredient-title">Ingredientes principales:</div>
-            <span class="ingredient-tag">Pechuga de Pollo</span>
-            <span class="ingredient-tag">Rebozado Secreto</span>
-            <span class="ingredient-tag">Especias Cajún</span>
-            <span class="ingredient-tag">Salsa Honey Mustard</span>
-            <span class="ingredient-tag">Papas Rústicas</span>
-          </div>
-          <!--<div class="menu-item-order">
-            <button class="btn btn-primary btn-order-item"
-              onclick="alert('Añadido al carrito: Crispy Tenders Combo ($11.90)')">Añadir al Carrito</button>
-          </div>-->
-        </div>
-      </div>
+        <!-- FILA 1: ALITAS BBQ AHUMADAS (Texto Izquierda, Plato Derecha) -->
+        <div class="carta-row reveal" id="item-alitas-bbq">
+          <div class="carta-info">
+            <div class="carta-item-header">
+              <h3 class="carta-item-title">ALITAS BBQ AHUMADAS</h3>
+              <span class="carta-price">$9.50</span>
+            </div>
+            <div class="carta-gold-line"></div>
+            <p class="carta-desc">8 alitas crujientes glaseadas en salsa barbacoa dulce artesanal, servidas con aderezo
+              ranch.</p>
 
-      <div class="menu-item reveal-scale" data-category="frito" style="transition-delay: 0.1s;">
-        <div class="menu-item-img-wrapper">
-          <img src="images/menu_crispy.png" alt="Combo Crispy Tenders" class="menu-item-img">
-          <span class="menu-item-price">$11.90</span>
-        </div>
-        <div class="menu-item-body">
-          <h3>Crispy Tenders Combo 2</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">Tiras de loro extra crujientes negra en
-            nuestra mezcla especial, con papas rústicas.</p>
-          <div class="menu-item-ingredients">
-            <div class="ingredient-title">Ingredientes principales:</div>
-            <span class="ingredient-tag">Pechuga de Pollo</span>
-            <span class="ingredient-tag">Rebozado Secreto</span>
-            <span class="ingredient-tag">Especias Cajún</span>
-            <span class="ingredient-tag">Salsa Honey Mustard</span>
-            <span class="ingredient-tag">Papas Rústicas</span>
-          </div>
-          <!--<div class="menu-item-order">
-            <button class="btn btn-primary btn-order-item"
-              onclick="alert('Añadido al carrito: Crispy Tenders Combo ($11.90)')">Añadir al Carrito</button>
-          </div>-->
-        </div>
-      </div>
+            <div class="carta-details-grid">
+              <div class="carta-col-ingredients">
+                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
+                <div class="carta-tags-container">
+                  <span class="carta-tag">Alitas de Pollo</span>
+                  <span class="carta-tag">Salsa BBQ Ahumada</span>
+                  <span class="carta-tag">Miel de Abejas</span>
+                  <span class="carta-tag">Aderezo Ranchero</span>
+                </div>
+              </div>
+              <div class="carta-col-highlights">
+                <ul class="carta-highlights-list">
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6z" />
+                      </svg>
+                    </span>
+                    <span>Alitas de Primera Calidad</span>
+                  </li>
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    </span>
+                    <span>Receta Familiar Secreta</span>
+                  </li>
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
+                      </svg>
+                    </span>
+                    <span>Papas Fritas Familiares</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
-      <!-- Item 3: Crispy Chicken Burger (Hamburguesa) -->
-      <div class="menu-item reveal-scale" data-category="hamburguesa" style="transition-delay: 0.2s;">
-        <div class="menu-item-img-wrapper">
-          <img src="images/menu_burger.png" alt="Crispy Chicken Burger" class="menu-item-img">
-          <span class="menu-item-price">$10.80</span>
-        </div>
-        <div class="menu-item-body">
-          <h3>Crispy Chicken Burger</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">Pechuga crujiente en pan brioche con queso fundido y
-            una combinación de vegetales frescos.</p>
-          <div class="menu-item-ingredients">
-            <div class="ingredient-title">Ingredientes principales:</div>
-            <span class="ingredient-tag">Filete de Pollo Crispy</span>
-            <span class="ingredient-tag">Queso Cheddar</span>
-            <span class="ingredient-tag">Pan Brioche</span>
-            <span class="ingredient-tag">Tomate &amp; Lechuga</span>
-            <span class="ingredient-tag">Salsa Especial D'Chicken</span>
+            <div class="carta-action-wrapper">
+              <button class="btn btn-primary carta-btn-order"
+                onclick="alert('Añadido al carrito: Alitas BBQ Ahumadas ($9.50)')">
+                Añadir al Carrito
+              </button>
+            </div>
           </div>
-          <!--<div class="menu-item-order">
-            <button class="btn btn-primary btn-order-item"
-              onclick="alert('Añadido al carrito: Crispy Chicken Burger ($10.80)')">Añadir al Carrito</button>
-          </div>-->
-        </div>
-      </div>
 
-      <!-- Item 4: Alitas BBQ Ahumadas (Alitas) -->
-      <div class="menu-item reveal-scale" data-category="alitas">
-        <div class="menu-item-img-wrapper">
-          <img src="images/menu_wings.png" alt="Alitas BBQ Ahumadas" class="menu-item-img">
-          <span class="menu-item-price">$9.50</span>
-        </div>
-        <div class="menu-item-body">
-          <h3>Alitas BBQ Ahumadas</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">8 alitas crujientes glaseadas en salsa barbacoa dulce
-            artesanal, servidas con aderezo ranch.</p>
-          <div class="menu-item-ingredients">
-            <div class="ingredient-title">Ingredientes principales:</div>
-            <span class="ingredient-tag">Alitas de Pollo</span>
-            <span class="ingredient-tag">Salsa BBQ Ahumada</span>
-            <span class="ingredient-tag">Miel de Abejas</span>
-            <span class="ingredient-tag">Bastones de Apio</span>
-            <span class="ingredient-tag">Aderezo Ranchero</span>
+          <div class="carta-plate-wrapper">
+            <div class="carta-plate">
+              <img src="images/hero_chicken.png" alt="Alitas BBQ y Pollo Familiar D'Chicken" class="carta-plate-img">
+            </div>
           </div>
-          <!--<div class="menu-item-order">
-            <button class="btn btn-primary btn-order-item"
-              onclick="alert('Añadido al carrito: Alitas BBQ Ahumadas ($9.50)')">Añadir al Carrito</button>
-          </div>-->
         </div>
-      </div>
 
-      <!-- Item 5: Pollo Entero Familiar (Brasa) -->
-      <div class="menu-item reveal-scale" data-category="brasa" style="transition-delay: 0.1s;">
-        <div class="menu-item-img-wrapper">
-          <img src="images/hero_chicken.png" alt="Pollo Entero Familiar" class="menu-item-img">
-          <span class="menu-item-price">$28.00</span>
-        </div>
-        <div class="menu-item-body">
-          <h3>Familiar D'Chicken (Entero)</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">Un pollo entero asado a la brasa, acompañado de una
-            porción gigante de papas y tres salsas.</p>
-          <div class="menu-item-ingredients">
-            <div class="ingredient-title">Ingredientes principales:</div>
-            <span class="ingredient-tag">Pollo Entero Asado</span>
-            <span class="ingredient-tag">Receta Familiar Secreta</span>
-            <span class="ingredient-tag">Papas Fritas Familiares</span>
-            <span class="ingredient-tag">Salsas de la Casa</span>
-            <span class="ingredient-tag">Ensalada Grande</span>
+        <!-- FILA 2: FAMILIAR D'CHICKEN (Plato Izquierda, Texto Derecha) -->
+        <div class="carta-row reverse reveal" id="item-familiar-dchicken">
+          <div class="carta-plate-wrapper">
+            <div class="carta-plate">
+              <img src="images/menu_wings.png" alt="Familiar D'Chicken a la brasa" class="carta-plate-img">
+            </div>
           </div>
-          <!--<div class="menu-item-order">
-            <button class="btn btn-primary btn-order-item"
-              onclick="alert('Añadido al carrito: Familiar D\'Chicken ($28.00)')">Añadir al Carrito</button>
-          </div>-->
-        </div>
-      </div>
 
-      <!-- Item 6: Alitas Buffalo Picantes (Alitas) -->
-      <div class="menu-item reveal-scale" data-category="alitas" style="transition-delay: 0.2s;">
-        <div class="menu-item-img-wrapper">
-          <img src="images/menu_wings.png" alt="Alitas Buffalo Picantes" class="menu-item-img">
-          <span class="menu-item-price">$9.80</span>
-        </div>
-        <div class="menu-item-body">
-          <h3>Alitas Buffalo Picantes</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">8 alitas crujientes bañadas en salsa buffalo picante
-            clásica, servidas con dip de queso azul.</p>
-          <div class="menu-item-ingredients">
-            <div class="ingredient-title">Ingredientes principales:</div>
-            <span class="ingredient-tag">Alitas de Pollo</span>
-            <span class="ingredient-tag">Salsa Buffalo Picante</span>
-            <span class="ingredient-tag">Pimienta de Cayena</span>
-            <span class="ingredient-tag">Bastones de Zanahoria</span>
-            <span class="ingredient-tag">Dip de Queso Azul</span>
+          <div class="carta-info">
+            <div class="carta-item-header">
+              <h3 class="carta-item-title">FAMILIAR D'CHICKEN (ENTERO)</h3>
+              <span class="carta-price">$28.00</span>
+            </div>
+            <div class="carta-gold-line"></div>
+            <p class="carta-desc">Pollo entero asado a la brasa con carbón de leña, acompañado de papas familiares y
+              selección de salsas.</p>
+
+            <div class="carta-details-grid">
+              <div class="carta-col-ingredients">
+                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
+                <div class="carta-tags-container">
+                  <span class="carta-tag">Pollo Entero Asado</span>
+                  <span class="carta-tag">Receta Familiar Secreta</span>
+                  <span class="carta-tag">Papas Fritas Familiares</span>
+                  <span class="carta-tag">Asados de la Casa</span>
+                </div>
+              </div>
+              <div class="carta-col-highlights">
+                <ul class="carta-highlights-list">
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                      </svg>
+                    </span>
+                    <span>Pollo Entero Asado</span>
+                  </li>
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    </span>
+                    <span>Receta Fijas Familiares</span>
+                  </li>
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
+                      </svg>
+                    </span>
+                    <span>Salsas de la Casa</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="carta-action-wrapper">
+              <button class="btn btn-primary carta-btn-order"
+                onclick="alert('Añadido al carrito: Familiar D\'Chicken ($28.00)')">
+                Añadir al Carrito
+              </button>
+            </div>
           </div>
-          <!--<div class="menu-item-order">
-            <button class="btn btn-primary btn-order-item"
-              onclick="alert('Añadido al carrito: Alitas Buffalo ($9.80)')">Añadir al Carrito</button>
-          </div>-->
         </div>
+
+        <!-- FILA 3: POLLO BROASTER / A LA BRASA (Texto Izquierda, Plato Derecha) -->
+        <div class="carta-row reveal" id="item-pollo-broaster">
+          <div class="carta-info">
+            <div class="carta-item-header">
+              <h3 class="carta-item-title">POLLO BROASTER TRADICIONAL</h3>
+              <span class="carta-price">$14.50</span>
+            </div>
+            <div class="carta-gold-line"></div>
+            <p class="carta-desc">Pollo frito crujiente estilo broaster marinado en cerveza negra y especias andinas,
+              con papas fritas caseras.</p>
+
+            <div class="carta-details-grid">
+              <div class="carta-col-ingredients">
+                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
+                <div class="carta-tags-container">
+                  <span class="carta-tag">Piezas de Pollo</span>
+                  <span class="carta-tag">Harina Especial</span>
+                  <span class="carta-tag">Especias Cajún</span>
+                  <span class="carta-tag">Papas Fritas</span>
+                </div>
+              </div>
+              <div class="carta-col-highlights">
+                <ul class="carta-highlights-list">
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" />
+                      </svg>
+                    </span>
+                    <span>Carne Jugosa y Asada</span>
+                  </li>
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    </span>
+                    <span>Costillas BBQ &amp; Sabor</span>
+                  </li>
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
+                      </svg>
+                    </span>
+                    <span>Vegetales Asados</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="carta-action-wrapper">
+              <button class="btn btn-primary carta-btn-order"
+                onclick="alert('Añadido al carrito: Pollo Broaster Tradicional ($14.50)')">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <div class="carta-plate-wrapper">
+            <div class="carta-plate">
+              <img src="images/menu_roasted.png" alt="Pollo Broaster Tradicional" class="carta-plate-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- FILA 4: D'CHICKENS BURGER (Plato Izquierda, Texto Derecha) -->
+        <div class="carta-row reverse reveal" id="item-dchickens-burger">
+          <div class="carta-plate-wrapper">
+            <div class="carta-plate">
+              <img src="images/menu_burger.png" alt="Hamburguesa D'Chickens Burger" class="carta-plate-img">
+            </div>
+          </div>
+
+          <div class="carta-info">
+            <div class="carta-item-header">
+              <h3 class="carta-item-title">D'CHICKENS BURGER</h3>
+              <span class="carta-price">$10.80</span>
+            </div>
+            <div class="carta-gold-line"></div>
+            <p class="carta-desc">Hamburguesa de pollo crujiente con queso cheddar fundido, pan brioche dorado y aderezo
+              especial césar.</p>
+
+            <div class="carta-details-grid">
+              <div class="carta-col-ingredients">
+                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
+                <div class="carta-tags-container">
+                  <span class="carta-tag">Pechuga de Pollo</span>
+                  <span class="carta-tag">Pan Brioche</span>
+                  <span class="carta-tag">Queso Cheddar</span>
+                  <span class="carta-tag">Aderezo Especial</span>
+                </div>
+              </div>
+              <div class="carta-col-highlights">
+                <ul class="carta-highlights-list">
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                      </svg>
+                    </span>
+                    <span>Pechuga a la Parrilla</span>
+                  </li>
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    </span>
+                    <span>Lechuga &amp; Tomate Fresco</span>
+                  </li>
+                  <li>
+                    <span class="carta-icon-bullet">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
+                      </svg>
+                    </span>
+                    <span>Sabor Parmesano &amp; Salsa</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="carta-action-wrapper">
+              <button class="btn btn-primary carta-btn-order"
+                onclick="alert('Añadido al carrito: D\'Chickens Burger ($10.80)')">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILA 5: SECCIÓN INFERIOR DOBLE COLUMNA (TIRAS DE POLLO & PECHUGA / ALITAS BUFFALO) -->
+        <div class="carta-bottom-grid reveal">
+
+          <!-- Columna Izquierda: TIRAS DE POLLO -->
+          <div class="carta-bottom-col">
+            <div class="carta-item-header">
+              <h3 class="carta-item-title">TIRAS DE POLLO</h3>
+              <span class="carta-price">$11.90</span>
+            </div>
+            <div class="carta-gold-line"></div>
+            <p class="carta-desc">Fajitas de pollo empanizadas extra crujientes acompañadas con salsa honey mustard y
+              papas rústicas.</p>
+
+            <div class="carta-col-ingredients">
+              <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
+              <div class="carta-tags-container">
+                <span class="carta-tag">Fajitas de Pollo</span>
+                <span class="carta-tag">Pan Rallado &amp; Especias</span>
+                <span class="carta-tag">Salsa Honey Mustard</span>
+              </div>
+            </div>
+
+            <div class="carta-action-wrapper" style="margin-top: 1.5rem;">
+              <button class="btn btn-primary carta-btn-order"
+                onclick="alert('Añadido al carrito: Tiras de Pollo ($11.90)')">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: PECHUGA A LA PLANCHA / ALITAS BUFFALO -->
+          <div class="carta-bottom-col with-side-plate">
+            <div class="carta-bottom-col-content">
+              <div class="carta-item-header">
+                <h3 class="carta-item-title">PECHUGA A LA PLANCHA</h3>
+                <span class="carta-price">$9.80</span>
+              </div>
+              <div class="carta-gold-line"></div>
+              <p class="carta-desc">Pechuga de pollo a la plancha dorada con vegetales frescos salteados al vapor y
+                aderezo ligero.</p>
+
+              <div class="carta-col-ingredients">
+                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
+                <div class="carta-tags-container">
+                  <span class="carta-tag">Pechuga de Pollo</span>
+                  <span class="carta-tag">Vegetales al Vapor</span>
+                  <span class="carta-tag">Aceite de Oliva</span>
+                </div>
+              </div>
+
+              <div class="carta-action-wrapper" style="margin-top: 1.5rem;">
+                <button class="btn btn-primary carta-btn-order"
+                  onclick="alert('Añadido al carrito: Pechuga a la Plancha ($9.80)')">
+                  Añadir al Carrito
+                </button>
+              </div>
+            </div>
+
+            <div class="carta-mini-plate">
+              <img src="images/menu_crispy.png" alt="Pechuga a la plancha y vegetales" class="carta-mini-plate-img">
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
   </section>
