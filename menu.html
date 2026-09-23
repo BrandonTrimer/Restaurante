@@ -43,385 +43,247 @@
       <!-- TABLERO DE LA CARTA (ESTILO RESTAURANT BOARD) -->
       <div class="carta-board reveal">
 
-        <!-- ENCABEZADO DE LA CARTA -->
-        <div class="carta-header">
-          <div class="carta-title-group">
-            <span class="carta-title-top">MENÚ</span>
-            <div class="carta-title-bottom">
-              <span class="carta-brand">D'CHICKEN</span>
-              <!--<svg class="carta-chicken-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 3c-.55 0-1 .45-1 1v1.07C8.74 5.56 7 7.58 7 10c0 1.66.81 3.13 2.05 4.07C8.42 14.57 8 15.48 8 16.5c0 1.93 1.57 3.5 3.5 3.5h1c1.93 0 3.5-1.57 3.5-3.5 0-1.02-.42-1.93-1.05-2.43C16.19 13.13 17 11.66 17 10c0-2.42-1.74-4.44-4-4.93V4c0-.55-.45-1-1-1zm-2 7a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm4 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/>
-              </svg>-->
-            </div>
-          </div>
-          <p class="carta-subtitle">Especialidades al Carbón, Recetas Familiares y Crujientes de Autor</p>
+        <!-- DECORACIÓN: ONDAS SUPERIORES IZQUIERDAS -->
+        <div class="carta-decor-wavy top-left">
+          <svg viewBox="0 0 100 80" fill="none" stroke="currentColor">
+            <path d="M5,10 Q25,32 45,15 T85,25" stroke-width="1.8" />
+            <path d="M5,26 Q25,48 45,31 T85,41" stroke-width="1.8" />
+            <path d="M5,42 Q25,64 45,47 T85,57" stroke-width="1.8" />
+            <path d="M5,58 Q25,80 45,63 T85,73" stroke-width="1.8" />
+          </svg>
         </div>
 
-        <!-- FILA 1: POLLASTRE A L'AST (Texto Izquierda, Plato Derecha) -->
-        <div class="carta-row reveal" id="item-alitas-bbq">
-          <div class="carta-info">
-            <div class="carta-item-header">
-              <h3 class="carta-item-title">POLLASTRE A L'AST</h3>
-              <span class="carta-price">18.00€</span>
-            </div>
-            <div class="carta-gold-line"></div>
-            <p class="carta-desc">Pollo entero asado a la brasa con carbón de leña, acompañado de papas familiares y
-              selección de salsas.</p>
+        <!-- DECORACIÓN: CRUCES LATERALES -->
+        <div class="carta-decor-crosses left">
+          <span>❖</span>
+          <span>❖</span>
+        </div>
+        <div class="carta-decor-crosses right">
+          <span>❖</span>
+          <span>❖</span>
+        </div>
 
-            <div class="carta-details-grid">
-              <div class="carta-col-ingredients">
-                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
-                <div class="carta-tags-container">
-                  <span class="carta-tag">Pollo Entero Asado</span>
-                  <span class="carta-tag">Papas Familiares</span>
-                  <span class="carta-tag">Salsas Seleccionadas</span>
-                </div>
-              </div>
-              <div class="carta-col-highlights">
-                <ul class="carta-highlights-list">
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6z" />
-                      </svg>
-                    </span>
-                    <span>Pollo Entero Asado</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    </span>
-                    <span>Papas Fritas Familiares</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
-                      </svg>
-                    </span>
-                    <span>Salsas Seleccionadas</span>
-                  </li>
+        <!-- ENCABEZADO DE LA CARTA (ESTILO POSTER) -->
+        <div class="carta-header-poster reveal">
+          <div class="carta-header-center">
+            <h1 class="carta-poster-brand">D'CHICKEN</h1>
+            <span class="carta-poster-menu">Menú</span>
+            <div class="carta-poster-tagline-wrap">
+              <span class="carta-tagline-line"></span>
+              <span class="carta-poster-tagline">SABOR QUE TE HACE VOLVER</span>
+              <span class="carta-tagline-line"></span>
+            </div>
+          </div>
+
+          <div class="carta-header-logo-right">
+            <img src="images/logo.png" alt="Logo D'Chicken Gallo" class="carta-poster-rooster">
+          </div>
+        </div>
+
+        <!-- CUADRÍCULA DEL MENÚ (2 COLUMNAS) -->
+        <div class="carta-menu-grid">
+
+          <!-- COLUMNA IZQUIERDA -->
+          <div class="carta-column">
+
+            <!-- 1. CROQUETES -->
+            <div class="carta-dish-card reveal-left" id="item-croquetes">
+              <div class="carta-dish-info">
+                <h3 class="carta-dish-title">Croquetes</h3>
+                <span class="carta-dish-portion">7 unidades</span>
+                <ul class="carta-dish-options">
+                  <li>Pollo</li>
+                  <li>Ternera</li>
+                  <li>Ibérico</li>
+                  <li>Cocido</li>
                 </ul>
+                <div class="carta-dish-price-pill">10,00€</div>
+                <p class="carta-dish-desc">Cremosas por dentro, crujientes por fuera.</p>
+              </div>
+
+              <div class="carta-dish-visual">
+                <!-- Rayitos decorativos -->
+                <svg class="carta-sparks top-right" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round">
+                  <line x1="8" y1="12" x2="3" y2="12" />
+                  <line x1="9" y1="9" x2="4" y2="4" />
+                  <line x1="12" y1="8" x2="12" y2="3" />
+                </svg>
+                <div class="carta-dish-img-wrap">
+                  <img src="images/menu_croquetas.jpg" alt="Croquetes caseras D'Chicken" class="carta-dish-img">
+                </div>
               </div>
             </div>
 
-            <!--<div class="carta-action-wrapper">
-              <button class="btn btn-primary carta-btn-order"
-                onclick="alert('Añadido al carrito: Alitas BBQ Ahumadas ($9.50)')">
-                Añadir al Carrito
-              </button>
-            </div>-->
+            <!-- 2. POLLASTRE A L'AST -->
+            <div class="carta-dish-card reveal-left" id="item-pollastre-alast">
+              <div class="carta-dish-info">
+                <h3 class="carta-dish-title">Pollastre a l'ast</h3>
+                <span class="carta-dish-portion">Pollo + patatas + alioli</span>
+                <div class="carta-dish-price-pill">18,00€</div>
+                <p class="carta-dish-desc">El clásico que nunca falla. Jugoso y con todo el sabor.</p>
+              </div>
+
+              <div class="carta-dish-visual">
+                <svg class="carta-sparks top-left" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round">
+                  <line x1="16" y1="12" x2="21" y2="12" />
+                  <line x1="15" y1="9" x2="20" y2="4" />
+                  <line x1="12" y1="8" x2="12" y2="3" />
+                </svg>
+                <div class="carta-dish-img-wrap">
+                  <img src="images/menu_pollo.jpg" alt="Pollastre a l'ast asado a la brasa" class="carta-dish-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. CANELONS  -->
+            <div class="carta-dish-card reveal-left" id="item-canelons">
+              <div class="carta-dish-info">
+                <h3 class="carta-dish-title">Canelons</h3>
+                <span class="carta-dish-portion">6 unidades</span>
+                <div class="carta-dish-price-pill">12,00€</div>
+                <p class="carta-dish-desc">Un bocado que sabe a hogar.</p>
+              </div>
+
+              <div class="carta-dish-visual">
+                <svg class="carta-sparks top-right" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round">
+                  <line x1="8" y1="12" x2="3" y2="12" />
+                  <line x1="9" y1="9" x2="4" y2="4" />
+                  <line x1="12" y1="8" x2="12" y2="3" />
+                </svg>
+                <div class="carta-dish-img-wrap">
+                  <img src="images/menu_canelons.jpg" alt="Canelons tradicionals gratinados" class="carta-dish-img">
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <div class="carta-plate-wrapper">
-            <div class="carta-plate">
-              <img src="images/menu_pollo.jpg" alt="Alitas BBQ y Pollo Familiar D'Chicken" class="carta-plate-img">
+          <!-- COLUMNA DERECHA -->
+          <div class="carta-column">
+
+            <!-- 4. ENSALADILLA -->
+            <div class="carta-dish-card reveal-right" id="item-ensaladilla">
+              <div class="carta-dish-info">
+                <h3 class="carta-dish-title">Ensaladilla</h3>
+                <span class="carta-dish-portion">650 gramos</span>
+                <div class="carta-dish-price-pill">10,00€</div>
+                <p class="carta-dish-desc">Nuestra receta tradicional, con el toque de la casa.</p>
+              </div>
+
+              <div class="carta-dish-visual">
+                <svg class="carta-sparks top-right" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round">
+                  <line x1="8" y1="12" x2="3" y2="12" />
+                  <line x1="9" y1="9" x2="4" y2="4" />
+                  <line x1="12" y1="8" x2="12" y2="3" />
+                </svg>
+                <div class="carta-dish-img-wrap">
+                  <img src="images/menu_ensaladilla.jpg" alt="Ensaladilla rusa tradicional con aceitunas"
+                    class="carta-dish-img">
+                </div>
+              </div>
             </div>
+
+            <!-- 5. MACARRONS -->
+            <div class="carta-dish-card reveal-right" id="item-macarrons">
+              <div class="carta-dish-info">
+                <h3 class="carta-dish-title">Macarrons</h3>
+                <span class="carta-dish-portion">750 gramos</span>
+                <div class="carta-dish-price-pill">10,00€</div>
+                <p class="carta-dish-desc">Con nuestra salsa especial, listos para compartir.</p>
+              </div>
+
+              <div class="carta-dish-visual">
+                <div class="carta-dish-img-wrap">
+                  <img src="images/menu_macarrons.jpg" alt="Macarrons bolonyesa caseros con queso y albahaca"
+                    class="carta-dish-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. BARRA DE PA -->
+            <div class="carta-dish-card reveal-right" id="item-barra-de-pa">
+              <div class="carta-dish-info">
+                <h3 class="carta-dish-title">Barra de pa</h3>
+                <span class="carta-dish-portion">Masa Madre</span>
+                <div class="carta-dish-price-pill">3,00€</div>
+                <p class="carta-dish-desc">El acompañante perfecto para cualquier plato.</p>
+              </div>
+
+              <div class="carta-dish-visual">
+                <svg class="carta-sparks bottom-right" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round">
+                  <line x1="8" y1="12" x2="3" y2="12" />
+                  <line x1="9" y1="15" x2="4" y2="20" />
+                  <line x1="12" y1="16" x2="12" y2="21" />
+                </svg>
+                <div class="carta-dish-img-wrap">
+                  <img src="images/menu_pan.jpg" alt="Barra de pan artesanal de masa madre" class="carta-dish-img">
+                </div>
+              </div>
+            </div>
+
           </div>
+
         </div>
 
-        <!-- FILA 2: MACARRONS BOLONYESA (Plato Izquierda, Texto Derecha) -->
-        <div class="carta-row reverse reveal" id="item-familiar-dchicken">
-          <div class="carta-plate-wrapper">
-            <div class="carta-plate">
-              <img src="images/menu_macarrons.jpg" alt="Familiar D'Chicken a la brasa" class="carta-plate-img">
+        <!-- PIE DEL TABLERO: FRASE & SELLOS DE CALIDAD -->
+        <div class="carta-board-footer reveal">
+          <div class="carta-footer-quote">
+            Buena comida,<br>mejores momentos
+          </div>
+
+          <div class="carta-features-group">
+            <!-- 1. Ingredientes de calidad -->
+            <div class="carta-feature-item">
+              <div class="carta-feature-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6" />
+                </svg>
+              </div>
+              <span class="carta-feature-label">Ingredientes<br>de calidad</span>
+            </div>
+
+            <!-- 2. Recetas tradicionales -->
+            <div class="carta-feature-item">
+              <div class="carta-feature-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M8 3v3M12 3v3M16 3v3" />
+                  <path d="M3 13h18c0 4-3.5 7-9 7s-9-3-9-7Z" />
+                  <line x1="2" y1="13" x2="22" y2="13" />
+                </svg>
+              </div>
+              <span class="carta-feature-label">Recetas<br>tradicionales</span>
+            </div>
+
+            <!-- 3. Hecho con pasión -->
+            <div class="carta-feature-item">
+              <div class="carta-feature-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                </svg>
+              </div>
+              <span class="carta-feature-label">Hecho<br>con pasión</span>
             </div>
           </div>
 
-          <div class="carta-info">
-            <div class="carta-item-header">
-              <h3 class="carta-item-title">MACARRONS BOLONYESA</h3>
-              <span class="carta-price">10.00€</span>
-            </div>
-            <div class="carta-gold-line"></div>
-            <p class="carta-desc">Macarrones con albóndigas caseras y salsa boloñesa.</p>
-
-            <div class="carta-details-grid">
-              <div class="carta-col-ingredients">
-                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
-                <div class="carta-tags-container">
-                  <span class="carta-tag">Macarrones con albóndigas caseras</span>
-                  <span class="carta-tag">Salsa Boloñesa</span>
-                </div>
-              </div>
-              <div class="carta-col-highlights">
-                <ul class="carta-highlights-list">
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-                      </svg>
-                    </span>
-                    <span>Macarrones con albóndigas caseras</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    </span>
-                    <span>Salsa Boloñesa</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
-                      </svg>
-                    </span>
-                    <span>Hecho en casa</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
+          <!-- ONDAS INFERIORES DERECHAS -->
+          <div class="carta-decor-wavy bottom-right">
+            <svg viewBox="0 0 100 80" fill="none" stroke="currentColor">
+              <path d="M15,10 Q35,32 55,15 T95,25" stroke-width="1.8" />
+              <path d="M15,26 Q35,48 55,31 T95,41" stroke-width="1.8" />
+              <path d="M15,42 Q35,64 55,47 T95,57" stroke-width="1.8" />
+              <path d="M15,58 Q35,80 55,63 T95,73" stroke-width="1.8" />
+            </svg>
           </div>
-        </div>
-
-        <!-- FILA 3: ENSALADILLA RUSA (Texto Izquierda, Plato Derecha) -->
-        <div class="carta-row reveal" id="item-pollo-broaster">
-          <div class="carta-info">
-            <div class="carta-item-header">
-              <h3 class="carta-item-title">ENSALADILLA RUSA</h3>
-              <span class="carta-price">10.00€</span>
-            </div>
-            <div class="carta-gold-line"></div>
-            <p class="carta-desc">Ensaladilla rusa con pollo desmechado, mayonesa casera y vegetales frescos.</p>
-
-            <div class="carta-details-grid">
-              <div class="carta-col-ingredients">
-                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
-                <div class="carta-tags-container">
-                  <span class="carta-tag">Pollo Desmechado</span>
-                  <span class="carta-tag">Mayonesa Casera</span>
-                  <span class="carta-tag">Vegetales Frescos</span>
-                </div>
-              </div>
-              <div class="carta-col-highlights">
-                <ul class="carta-highlights-list">
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" />
-                      </svg>
-                    </span>
-                    <span>Pollo Desmechado</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    </span>
-                    <span>Mayonesa Casera</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
-                      </svg>
-                    </span>
-                    <span>Vegetales Frescos</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="carta-plate-wrapper">
-            <div class="carta-plate">
-              <img src="images/menu_ensaladilla.jpg" alt="Pollo Broaster Tradicional" class="carta-plate-img">
-            </div>
-          </div>
-        </div>
-
-        <!-- FILA 4: CANELONS TRADICIONALS (Plato Izquierda, Texto Derecha) -->
-        <div class="carta-row reverse reveal" id="item-dchickens-burger">
-          <div class="carta-plate-wrapper">
-            <div class="carta-plate">
-              <img src="images/menu_canelons.jpg" alt="Hamburguesa D'Chickens Burger" class="carta-plate-img">
-            </div>
-          </div>
-
-          <div class="carta-info">
-            <div class="carta-item-header">
-              <h3 class="carta-item-title">CANELONS TRADICIONALS</h3>
-              <span class="carta-price">12.00€</span>
-            </div>
-            <div class="carta-gold-line"></div>
-            <p class="carta-desc">Canelones tradicionales con pavo desmigado y salsa de tomate y champiñones.</p>
-
-            <div class="carta-details-grid">
-              <div class="carta-col-ingredients">
-                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
-                <div class="carta-tags-container">
-                  <span class="carta-tag">Pavo Desmigado</span>
-                  <span class="carta-tag">Salsa de Tomate</span>
-                  <span class="carta-tag">Champiñones</span>
-                </div>
-              </div>
-              <div class="carta-col-highlights">
-                <ul class="carta-highlights-list">
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-                      </svg>
-                    </span>
-                    <span>Pavo Desmigado</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    </span>
-                    <span>Salsa de Tomate</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
-                      </svg>
-                    </span>
-                    <span>Champiñones</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-        <!-- FILA 5: CROQUETES (Texto Izquierda, Plato Derecha) -->
-        <div class="carta-row reveal" id="item-croquetes">
-          <div class="carta-info">
-            <div class="carta-item-header">
-              <h3 class="carta-item-title">CROQUETES</h3>
-              <span class="carta-price">10.00€</span>
-            </div>
-            <div class="carta-gold-line"></div>
-            <p class="carta-desc">Croquetes caseras de pollo, setas y patatas.</p>
-
-            <div class="carta-details-grid">
-              <div class="carta-col-ingredients">
-                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
-                <div class="carta-tags-container">
-                  <span class="carta-tag">Pollo</span>
-                  <span class="carta-tag">Setas</span>
-                  <span class="carta-tag">Patatas</span>
-                </div>
-              </div>
-              <div class="carta-col-highlights">
-                <ul class="carta-highlights-list">
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" />
-                      </svg>
-                    </span>
-                    <span>Pollo Desmechado</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    </span>
-                    <span>Mayonesa Casera</span>
-                  </li>
-                  <li>
-                    <span class="carta-icon-bullet">
-                      <svg viewBox="0 0 24 24">
-                        <path
-                          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
-                      </svg>
-                    </span>
-                    <span>Setas</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="carta-plate-wrapper">
-            <div class="carta-plate">
-              <img src="images/menu_croquetas.jpg" alt="Croquetes" class="carta-plate-img">
-            </div>
-          </div>
-        </div>
-        <!-- FILA ultima: SECCIÓN INFERIOR DOBLE COLUMNA (BARRA DE PA & ESCALIVADA) -->
-        <div class="carta-bottom-grid reveal">
-
-          <!-- Columna Izquierda: BARRA DE PA -->
-          <div class="carta-bottom-col with-side-plate">
-            <div class="carta-bottom-col-content">
-              <div class="carta-item-header">
-                <h3 class="carta-item-title">BARRA DE PA</h3>
-                <span class="carta-price">3.00€</span>
-              </div>
-              <div class="carta-gold-line"></div>
-              <p class="carta-desc">Deliciosa barra de pan casera hecha con masa madre.</p>
-
-              <div class="carta-col-ingredients">
-                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
-                <div class="carta-tags-container">
-                  <span class="carta-tag">Harina de Fuerza</span>
-                  <span class="carta-tag">Masa Madre</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="carta-mini-plate">
-              <img src="images/menu_pan.jpg" alt="Escalivada" class="carta-mini-plate-img">
-            </div>
-          </div>
-
-          <!-- Columna Derecha: ESCALIVADA -->
-          <div class="carta-bottom-col with-side-plate">
-            <div class="carta-bottom-col-content">
-              <div class="carta-item-header">
-                <h3 class="carta-item-title">ESCALIVADA</h3>
-                <span class="carta-price">10.00€</span>
-              </div>
-              <div class="carta-gold-line"></div>
-              <p class="carta-desc">Vegetales frescos escalivados lentamente hasta caramelizar, aderezados con aceite
-                de oliva virgen extra y sal marina.</p>
-
-              <div class="carta-col-ingredients">
-                <div class="carta-section-label">INGREDIENTES PRINCIPALES:</div>
-                <div class="carta-tags-container">
-                  <span class="carta-tag">Calabacín</span>
-                  <span class="carta-tag">Pimiento Rojo</span>
-                  <span class="carta-tag">Cebolla</span>
-                  <span class="carta-tag">Tomate</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="carta-mini-plate">
-              <img src="images/menu_escalivada.jpg" alt="Escalivada" class="carta-mini-plate-img">
-            </div>
-          </div>
-
         </div>
 
       </div>

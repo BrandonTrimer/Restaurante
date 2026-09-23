@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 
 /* VARIABLES & DESIGN SYSTEM */
 :root {
@@ -916,6 +917,411 @@ section {
   transform: scale(1.12) rotate(4deg);
 }
 
+/* ===================================================
+   CARTA D'CHICKEN - POSTER BOARD STYLES (2 COLUMNAS)
+   =================================================== */
+
+/* ENCABEZADO ESTILO POSTER */
+.carta-header-poster {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(250, 184, 0, 0.2);
+  z-index: 3;
+}
+
+.carta-header-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carta-poster-brand {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: 4px;
+  background: linear-gradient(135deg, #FFF5B8 0%, #FAB800 50%, #C97D00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: var(--primary);
+  filter: drop-shadow(0 2px 14px rgba(250, 184, 0, 0.45));
+  line-height: 1.1;
+  margin-bottom: 0.15rem;
+}
+
+.carta-poster-menu {
+  font-family: 'Cinzel', serif;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #FFF2CC;
+  letter-spacing: 3px;
+  margin-bottom: 0.6rem;
+}
+
+.carta-poster-tagline-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.carta-tagline-line {
+  width: 50px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.carta-poster-tagline {
+  font-family: var(--font-title);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #E2BF65;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+.carta-header-logo-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.carta-poster-rooster {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 16px rgba(250, 184, 0, 0.5));
+  animation: flameGlow 2.5s infinite ease-in-out alternate;
+}
+
+/* CUADRÍCULA DE 2 COLUMNAS */
+.carta-menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4.5rem;
+  row-gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.carta-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TARJETA DE PLATILLO */
+.carta-dish-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(250, 184, 0, 0.14);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.carta-column .carta-dish-card:last-child {
+  border-bottom: none;
+}
+
+.carta-dish-card:hover {
+  border-bottom-color: rgba(250, 184, 0, 0.4);
+}
+
+.carta-dish-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.carta-dish-title {
+  font-family: var(--font-title);
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #FFF2CC;
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+  transition: var(--transition-smooth);
+}
+
+.carta-dish-card:hover .carta-dish-title {
+  color: var(--primary);
+  text-shadow: 0 0 14px rgba(250, 184, 0, 0.4);
+}
+
+.carta-dish-portion {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #c9bdae;
+  letter-spacing: 0.2px;
+}
+
+.carta-dish-options {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0.35rem 0;
+  padding-left: 0.1rem;
+}
+
+.carta-dish-options li {
+  font-size: 0.9rem;
+  color: #E2E2E2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carta-dish-options li::before {
+  content: '•';
+  color: var(--primary);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* PASTILLA DE PRECIO */
+.carta-dish-price-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(250, 184, 0, 0.08);
+  border: 1.5px solid var(--primary);
+  border-radius: 50px;
+  padding: 0.35rem 1.45rem;
+  letter-spacing: 0.5px;
+  margin: 0.4rem 0;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-smooth);
+}
+
+.carta-dish-card:hover .carta-dish-price-pill {
+  background: rgba(250, 184, 0, 0.22);
+  border-color: var(--accent);
+  color: #FFF;
+  box-shadow: 0 0 20px rgba(250, 184, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.carta-dish-desc {
+  font-size: 0.95rem;
+  color: #C0C0C0;
+  line-height: 1.55;
+  max-width: 260px;
+}
+
+/* VISUAL DE PLATILLO (IMAGEN + PEDESTAL) */
+.carta-dish-visual {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta-dish-img-wrap {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, rgba(250, 184, 0, 0.85), rgba(250, 184, 0, 0.15) 50%, rgba(250, 184, 0, 0.75));
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.9), 0 0 28px rgba(250, 184, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.carta-dish-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 60%;
+  border: 3px solid #110204;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carta-dish-card:hover .carta-dish-img-wrap {
+  transform: scale(1.07);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.95), 0 0 38px rgba(250, 184, 0, 0.5);
+  border-color: var(--accent);
+}
+
+.carta-dish-card:hover .carta-dish-img {
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* RAYITOS DECORATIVOS (BURST SPARKS) */
+.carta-sparks {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+  pointer-events: none;
+  opacity: 0.8;
+  transition: var(--transition-smooth);
+}
+
+.carta-sparks.top-left {
+  top: -6px;
+  left: -6px;
+}
+
+.carta-sparks.top-right {
+  top: -6px;
+  right: -6px;
+}
+
+.carta-sparks.bottom-right {
+  bottom: -4px;
+  right: -4px;
+}
+
+.carta-dish-card:hover .carta-sparks {
+  opacity: 1;
+  transform: scale(1.25);
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
+/* PIE DE LA CARTA (FRASE & SELLOS) */
+.carta-board-footer {
+  margin-top: 3.5rem;
+  padding-top: 2.8rem;
+  border-top: 1px solid rgba(250, 184, 0, 0.22);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.carta-footer-quote {
+  font-family: 'Dancing Script', 'Caveat', cursive;
+  font-size: clamp(2.2rem, 3.8vw, 2.9rem);
+  font-weight: 700;
+  color: #FFF099;
+  line-height: 1.15;
+  transform: rotate(-3deg);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8), 0 0 24px rgba(250, 184, 0, 0.3);
+}
+
+.carta-features-group {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.carta-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.65rem;
+  transition: var(--transition-smooth);
+}
+
+.carta-feature-item:hover {
+  transform: translateY(-4px);
+}
+
+.carta-feature-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1.5px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  background: rgba(250, 184, 0, 0.07);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: var(--transition-smooth);
+}
+
+.carta-feature-item:hover .carta-feature-circle {
+  background: rgba(250, 184, 0, 0.22);
+  border-color: var(--accent);
+  box-shadow: 0 0 22px rgba(250, 184, 0, 0.55);
+  transform: scale(1.1);
+}
+
+.carta-feature-circle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.carta-feature-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #E2E2E2;
+  line-height: 1.3;
+}
+
+/* DECORACIONES DE FONDO DE LA CARTA */
+.carta-decor-wavy {
+  position: absolute;
+  color: rgba(250, 184, 0, 0.35);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carta-decor-wavy.top-left {
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 85px;
+  height: 65px;
+}
+
+.carta-decor-wavy.bottom-right {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 85px;
+  height: 65px;
+}
+
+.carta-decor-crosses {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: rgba(250, 184, 0, 0.35);
+  font-size: 1.2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carta-decor-crosses.left {
+  left: 1.5rem;
+  top: 55%;
+}
+
+.carta-decor-crosses.right {
+  right: 1.5rem;
+  top: 42%;
+}
+
 /* CONTACT PAGE */
 .contact-grid {
   display: grid;
@@ -1287,6 +1693,18 @@ footer {
     width: 220px;
     height: 220px;
   }
+
+  /* Poster Menu Responsive 1024px */
+  .carta-menu-grid {
+    column-gap: 2.8rem;
+  }
+  .carta-dish-img-wrap {
+    width: 140px;
+    height: 140px;
+  }
+  .carta-dish-title {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1475,6 +1893,51 @@ footer {
     width: 150px;
     height: 150px;
   }
+
+  /* Poster Menu Responsive 768px */
+  .carta-header-poster {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .carta-header-logo-right {
+    position: static;
+    transform: none;
+    margin-top: 0.5rem;
+  }
+  .carta-poster-rooster {
+    width: 65px;
+    height: 65px;
+  }
+  .carta-menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .carta-column .carta-dish-card:last-child {
+    border-bottom: 1px solid rgba(250, 184, 0, 0.15);
+  }
+  .carta-dish-card {
+    padding: 1.6rem 0;
+  }
+  .carta-board-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .carta-footer-quote {
+    transform: none;
+  }
+  .carta-features-group {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+  .carta-decor-crosses {
+    display: none;
+  }
+  .carta-decor-wavy {
+    opacity: 0.4;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1522,5 +1985,47 @@ footer {
 
   .carta-item-title {
     font-size: 1.35rem;
+  }
+
+  /* Poster Menu Responsive 480px */
+  .carta-dish-card {
+    gap: 1rem;
+    align-items: center;
+  }
+  .carta-dish-img-wrap {
+    width: 115px;
+    height: 115px;
+    padding: 3px;
+  }
+  .carta-dish-title {
+    font-size: 1.35rem;
+  }
+  .carta-dish-price-pill {
+    font-size: 1.05rem;
+    padding: 0.25rem 1.1rem;
+  }
+  .carta-dish-desc {
+    font-size: 0.88rem;
+  }
+  .carta-poster-tagline {
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+  }
+  .carta-tagline-line {
+    width: 25px;
+  }
+  .carta-features-group {
+    gap: 1.2rem;
+  }
+  .carta-feature-circle {
+    width: 44px;
+    height: 44px;
+  }
+  .carta-feature-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+  .carta-feature-label {
+    font-size: 0.72rem;
   }
 }
