@@ -1191,7 +1191,7 @@ section {
   right: -6px;
 }
 
-.carta-sparks.bottom-right {
+.carta-sparks.top-right {
   bottom: -4px;
   right: -4px;
 }
@@ -1294,8 +1294,8 @@ section {
   height: 65px;
 }
 
-.carta-decor-wavy.bottom-right {
-  bottom: 1.5rem;
+.carta-decor-wavy.top-right {
+  top: 1.5rem;
   right: 1.5rem;
   width: 85px;
   height: 65px;
@@ -1698,10 +1698,12 @@ footer {
   .carta-menu-grid {
     column-gap: 2.8rem;
   }
+
   .carta-dish-img-wrap {
     width: 140px;
     height: 140px;
   }
+
   .carta-dish-title {
     font-size: 1.5rem;
   }
@@ -1900,47 +1902,61 @@ footer {
     gap: 1.5rem;
     padding-bottom: 1.5rem;
   }
+
   .carta-header-logo-right {
     position: static;
     transform: none;
     margin-top: 0.5rem;
   }
+
   .carta-poster-rooster {
     width: 65px;
     height: 65px;
   }
+
   .carta-menu-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .carta-column .carta-dish-card:last-child {
     border-bottom: 1px solid rgba(250, 184, 0, 0.15);
   }
+
   .carta-dish-card {
     padding: 1.6rem 0;
   }
+
   .carta-board-footer {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
   }
+
   .carta-footer-quote {
     transform: none;
   }
+
   .carta-features-group {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.8rem;
   }
+
   .carta-decor-crosses {
     display: none;
   }
+
   .carta-decor-wavy {
     opacity: 0.4;
   }
 }
 
 @media (max-width: 480px) {
+  .carta-decor-wavy {
+    display: none;
+  }
+
   .hero-buttons {
     flex-direction: column;
     width: 100%;
@@ -1992,39 +2008,49 @@ footer {
     gap: 1rem;
     align-items: center;
   }
+
   .carta-dish-img-wrap {
     width: 115px;
     height: 115px;
     padding: 3px;
   }
+
   .carta-dish-title {
     font-size: 1.35rem;
   }
+
   .carta-dish-price-pill {
     font-size: 1.05rem;
     padding: 0.25rem 1.1rem;
   }
+
   .carta-dish-desc {
     font-size: 0.88rem;
   }
+
   .carta-poster-tagline {
     font-size: 0.72rem;
     letter-spacing: 1.5px;
   }
+
   .carta-tagline-line {
     width: 25px;
   }
+
   .carta-features-group {
     gap: 1.2rem;
   }
+
   .carta-feature-circle {
     width: 44px;
     height: 44px;
   }
+
   .carta-feature-circle svg {
     width: 20px;
     height: 20px;
   }
+
   .carta-feature-label {
     font-size: 0.72rem;
   }
