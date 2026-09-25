@@ -147,8 +147,8 @@ header {
   width: 100%;
   z-index: 1000;
   background: rgba(17, 2, 4, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /*backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);*/
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   transition: var(--transition-smooth);
 }
@@ -1170,7 +1170,7 @@ section {
   transform: scale(1.1) rotate(3deg);
 }
 
-/* RAYITOS DECORATIVOS (BURST SPARKS) */
+/* RAYITOS DECORATIVOS (BURST SPARKS) 
 .carta-sparks {
   position: absolute;
   width: 22px;
@@ -1200,7 +1200,7 @@ section {
   opacity: 1;
   transform: scale(1.25);
   filter: drop-shadow(0 0 8px var(--accent));
-}
+}*/
 
 /* PIE DE LA CARTA (FRASE & SELLOS) */
 .carta-board-footer {
