@@ -1157,7 +1157,7 @@ section {
   object-fit: cover;
   object-position: center 60%;
   border: 3px solid #110204;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .carta-dish-card:hover .carta-dish-img-wrap {
